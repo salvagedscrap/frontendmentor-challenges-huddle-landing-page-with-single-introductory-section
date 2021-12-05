@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:linear-gradient(to right , rgba(232, 130, 232, 0.7), rgba(103, 75, 175, 0.7)), url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    
+
+}
+
+
+
+.main{
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+    img{
+        width: 100%;
+    }
+    .container{
+        padding: 9rem 5rem;
+        display: flex;
+        gap: 4rem;
+       
+        .container-left{
+          flex: 1 1 60%;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          align-items: flex-start;
+          
+
+          .logo{
+            padding: 2rem 0 ;   
+            }
+    
+        }
+        .container-right{
+            flex: 1 1 40%;
+            display: flex;
+            flex-direction:column;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+        
+            
+
+            .header-1{
+                color: #fff;
+                line-height: 1.4;
+                letter-spacing: .6px;
+                margin-bottom: 2rem;
+            }
+            .text{
+                color: #fff;
+                line-height: 1.2;
+                letter-spacing: .6px;
+                margin-bottom: 1.4rem;
+            }
+
+
+            .btn-register{
+               background-color: #fff;
+               color: hsl(257, 40%, 49%);
+               border: none;
+               border-radius: 50px;
+               padding: 1rem 4rem;
+               font-size: 1.2rem;
+               cursor: pointer;
+               transition: all .2s;
+
+                &:hover{
+                    background-color: hsl(300, 69%, 71%) ;
+                    color: #fff;
+                }
+            }
+          
+        }
+
+
+
+    }
+
+}
+.icon-container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    ion-icon{
+       font-size: 2rem;
+       padding: .5rem;
+       fill: #fff;
+       margin-right: 1.2rem;
+       border: 1px solid #fff;
+       border-radius: 50%;
+       transition: all .2s;
+        &:hover{
+            border: 1px solid hsl(300, 73%, 61%);
+            fill:hsl(300, 67%, 62%);
+        }
+    }
+    
+    
+}
+
+@media (max-width:62em) {
+    
+    .container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .container-right{
+      
+    display: block;
+    }
+    .icon-container{
+       position: relative;
+       margin: 4rem auto 0;
+    }
+    .btn-register{
+        margin: 0 auto;
+        width: 80%;
+    }
+   
+    
+}
+@media (min-width:1em) and (max-width:37.5em) {
+   
+    html{
+        font-size: 56%;
+    }
+    body{
+        background-image:linear-gradient(to right , rgba(232, 130, 232, 0.7), rgba(103, 75, 175, 0.7)), url(./images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Open Sans', sans-serif;
+        
+    
+    }
+    .container{
+        padding:2rem;
+        
+    }
+    .container-right{
+      text-align: center;
+      .header-1{
+        text-align: center;
+          margin: 0 auto;
+      }
+    .icon-container{
+       position: relative;
+       margin: 4rem auto 0;
+    }
+    .btn-register{
+        margin: 0 auto;
+        width: 80%;
+    }
+   
+    
+}
+}
